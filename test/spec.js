@@ -14,17 +14,15 @@ describe('assemblyscript', function() {
 
     it('assemblyscript file can be compiled to WebAssembly and call functions', function() {
         var loaderContext = {
-            callback: function(err, out) {
-                expect(err).toBe(null);
-                expect(out.length).not.toBe(0);
-                expect(out).toMatch(/module.exports = WebAssemblyModule;/);
-            }
+            addDependency: function() {}
         };
-        var buffer;
-        spyOn(loaderContext, 'callback');
+        var module;
+        spyOn(loaderContext, 'addDependency');
 
-        buffer = loader.call(loaderContext, source);
-        expect(loaderContext.callback).toHaveBeenCalled();
-        expect(buffer).toBeUndefined();
+        module = loader.call(loaderContext, source);
+        expect(loaderContext.addDependency).toHaveBeenCalled();
+        expect(module).toBeDefined();
+        expect(module.length).not.toBe(0);
+        expect(module).toMatch(/module.exports = WebAssemblyModule;/);
     });
 });

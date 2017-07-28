@@ -29,7 +29,6 @@
     "jasmine": "^2.6.0"
   },
   "dependencies": {
-    "assemblyscript": "^0.1.0",
-    "wasm-loader": "^1.0.0"
+    "assemblyscript": "^0.1.0"
   }
 }
