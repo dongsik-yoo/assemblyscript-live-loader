@@ -14,7 +14,7 @@ module: {
         {
             test: /\.asc$/,       // your assemblyscript file extension
             exclude: 'node_modules/',
-            loader: 'assembly-script-loader'
+            loader: 'assemblyscript-live-loader'
         }
     ]
 }
