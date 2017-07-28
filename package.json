@@ -1,0 +1,35 @@
+{
+  "name": "assemblyscript-live-loader",
+  "version": "0.1.0",
+  "description": "A webpack loader that compiles assemblyscript to WebAssembly(wasm) and bundle it",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jasmine ./test/spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dongsik-yoo/assemblyscript-live-loader.git"
+  },
+  "keywords": [
+    "WebAssemly",
+    "wasm",
+    "assemblyscript",
+    "webpack",
+    "loader"
+  ],
+  "author": "FE Development Lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dongsik-yoo/assemblyscript-live-loader/issues"
+  },
+  "homepage": "https://github.com/dongsik-yoo/assemblyscript-live-loader",
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-tui": "^1.0.1",
+    "jasmine": "^2.6.0"
+  },
+  "dependencies": {
+    "assemblyscript": "^0.1.0",
+    "wasm-loader": "^1.0.0"
+  }
+}
