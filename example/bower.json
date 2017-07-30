@@ -1,0 +1,17 @@
+{
+  "name": "assemblyscript-live-loader-example",
+  "description": "assemblyscript-live-loader example",
+  "main": "index.js",
+  "authors": [
+    "Dongsik Yoo <dongsik.yoo@nhnent.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
