@@ -1,9 +1,9 @@
 # assemblyscript-live-loader
-Webpack loader to bundle assemblyscript file as WebAssembly
+Compile assemblyscript and WASM binary module loader for Webpack
 
 ## Installation
 ```
-npm install --save-dev https://github.com/dongsik-yoo/assemblyscript-live-loader.git
+npm install --save-dev assemblyscript-live-loader
 ```
 
 ## Config
@@ -92,4 +92,4 @@ module.exports = {
 
 ## Dependencies
 * [assemblyscript](https://github.com/dcodeIO/AssemblyScript)
-* [wasm-loader](https://github.com/dcodeIO/AssemblyScript) -> I refers wasm module loader codes because there is some error for uglifijs (it contains both es5, es6 sources).
+* [wasm-loader](https://github.com/ballercat/wasm-loader) -> I refers wasm module loader codes because there is some error for uglifyingjs (it contains both es5, es6 syntax).
