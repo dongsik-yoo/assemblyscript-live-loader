@@ -22586,8 +22586,7 @@ var App = function (_React$Component) {
         value: function componentDidMount() {
             this.makeSuiteInLoopJs();
             this.makeSuiteInLoopWasm();
-            this.startTestInLoopJs();
-            this.startTestInLoopWasm();
+            this.startTestInLoopJs().then(this.startTestInLoopWasm());
         }
     }, {
         key: 'makeSuiteInLoopJs',
@@ -22787,6 +22786,8 @@ var App = function (_React$Component) {
             this.setState({
                 dataInJsLoop: data
             });
+
+            return Promise.resolve();
         }
     }, {
         key: 'startTestInLoopWasm',
@@ -22824,6 +22825,8 @@ var App = function (_React$Component) {
             this.setState({
                 dataInWasmLoop: data
             });
+
+            return Promise.resolve();
         }
     }, {
         key: 'render',
