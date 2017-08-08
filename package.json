@@ -1,6 +1,6 @@
 {
   "name": "assemblyscript-live-loader",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A webpack loader that compiles assemblyscript to WebAssembly(wasm) and bundle it",
   "main": "lib/index.js",
   "scripts": {
@@ -26,7 +26,8 @@
   "devDependencies": {
     "eslint": "^4.3.0",
     "eslint-config-tui": "^1.0.1",
-    "jasmine": "^2.6.0"
+    "jasmine": "^2.6.0",
+    "typescript": "^2.4.2"
   },
   "dependencies": {
     "assemblyscript": "^0.1.0"

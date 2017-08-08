@@ -23,6 +23,6 @@ describe('assemblyscript', function() {
         expect(loaderContext.addDependency).toHaveBeenCalled();
         expect(module).toBeDefined();
         expect(module.length).not.toBe(0);
-        expect(module).toMatch(/module.exports = WebAssemblyModule;/);
+        expect(module).toMatch(/module.exports = compatibleModule;/);
     });
 });
