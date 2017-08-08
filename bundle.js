@@ -32708,6 +32708,8 @@ module.exports = {
 /* 199 */
 /***/ (function(module, exports) {
 
+var compatibleModule;
+if (typeof WebAssembly !== "undefined") {
 var buffer = new ArrayBuffer(1705);
 var uint8 = new Uint8Array(buffer);
 uint8.set([
@@ -32728,9 +32730,82 @@ var WebAssemblyModule = function(deps) {
 
     return new WebAssembly.Instance(new WebAssembly.Module(buffer), deps || defaultDeps);
 };
+compatibleModule = WebAssemblyModule;
+}
+else {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function add(a, b) {
+    return a + b;
+}
+exports.add = add;
+function subtract(a, b) {
+    return a - b;
+}
+exports.subtract = subtract;
+function multiply(a, b) {
+    return a * b;
+}
+exports.multiply = multiply;
+function divide(a, b) {
+    return a / b;
+}
+exports.divide = divide;
+function factorial(num) {
+    var tmp = num;
+    if (num < 0) {
+        return -1;
+    }
+    else if (num === 0) {
+        return 1;
+    }
+    while (num > 2) {
+        tmp *= num;
+        num -= 1;
+    }
+    return tmp;
+}
+exports.factorial = factorial;
+function addWithLoopCount(count, a, b) {
+    var i = 0;
+    for (; i < count; i += 1) {
+        add(a, b);
+    }
+}
+exports.addWithLoopCount = addWithLoopCount;
+function subtractWithLoopCount(count, a, b) {
+    var i = 0;
+    for (; i < count; i += 1) {
+        subtract(a, b);
+    }
+}
+exports.subtractWithLoopCount = subtractWithLoopCount;
+function multiplyWithLoopCount(count, a, b) {
+    var i = 0;
+    for (; i < count; i += 1) {
+        multiply(a, b);
+    }
+}
+exports.multiplyWithLoopCount = multiplyWithLoopCount;
+function divideWithLoopCount(count, a, b) {
+    var i = 0;
+    for (; i < count; i += 1) {
+        divide(a, b);
+    }
+}
+exports.divideWithLoopCount = divideWithLoopCount;
+function factorialWithLoopCount(count, num) {
+    var i = 0;
+    for (; i < count; i += 1) {
+        factorial(num);
+    }
+}
+exports.factorialWithLoopCount = factorialWithLoopCount;
 
-module.exports = WebAssemblyModule;
-
+compatibleModule = function() {}
+compatibleModule.prototype.exports = exports;
+}
+module.exports = compatibleModule;
 
 /***/ })
 /******/ ]);
