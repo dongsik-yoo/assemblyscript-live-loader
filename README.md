@@ -1,5 +1,6 @@
 # assemblyscript-live-loader
 Compile assemblyscript and WASM binary module loader for Webpack
+* Support fallback normal javascript module which is transpiled by typescript compiler.
 
 ## Installation
 ```
