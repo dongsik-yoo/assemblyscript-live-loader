@@ -1,22 +1,24 @@
-'use strict';
+import * as fs from 'fs';
+import * as path from 'path';
+import loader from '../lib';
 
-var fs = require('fs');
-var path = require('path');
-var loader = require('../lib');
+interface LOADER_CONTEXT {
+    addDependency: (dependency: string) => any
+}
 
 describe('assemblyscript', function() {
-    var sourceFile = path.resolve('./test/source.js');
-    var source;
+    const sourceFile = path.resolve('./test/source.js');
+    let source: string;
 
     beforeAll(function() {
         source = fs.readFileSync(sourceFile, 'utf-8');
     });
 
     it('assemblyscript file can be compiled to WebAssembly and call functions', function() {
-        var loaderContext = {
+        const loaderContext: LOADER_CONTEXT = {
             addDependency: function() {}
         };
-        var module;
+        let module: string;
         spyOn(loaderContext, 'addDependency');
 
         module = loader.call(loaderContext, source);

@@ -4,7 +4,7 @@
   "description": "A webpack loader that compiles assemblyscript to WebAssembly(wasm) and bundle it",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jasmine ./test/spec.js"
+    "test": "jasmine-ts ./test/spec.ts"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,12 @@
   },
   "homepage": "https://github.com/dongsik-yoo/assemblyscript-live-loader",
   "devDependencies": {
+    "@types/jasmine": "^2.8.3",
+    "@types/node": "^9.3.0",
     "eslint": "^4.3.0",
     "eslint-config-tui": "^1.0.1",
-    "jasmine": "^2.6.0",
-    "typescript": "^2.4.2"
+    "jasmine-ts": "^0.2.1",
+    "typescript": "^2.6.2"
   },
   "dependencies": {
     "assemblyscript": "^0.1.0"

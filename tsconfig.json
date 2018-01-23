@@ -1,0 +1,10 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "es5",
+        "noImplicitReturns": true
+    },
+    "include": [
+        "./lib/**/*.ts"
+    ]
+}
